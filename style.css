@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    background-color: #2E2E2E;
+    color: #EEEEEE;
+}
+
+header {
+    width: 100%;
+    color: #2E2E2E;
+    font-weight: bolder;
+}
+
+header p {
+    padding: .5em;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #5294E2;
+    text-align: center;
+}
+
+nav ul {
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #2E2E2E;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+}
+
+nav ul li:hover {
+    background-color: #FF4D4D;
+}
+
+nav ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    background-color: #FF4D4D;
+}
+
+nav ul li a:hover {
+    background-color: #2E2E2E50;
+}
+
+nav ul li a p {
+    float: left;
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    color: #2E2E2E;
+    font-weight: bolder;
+}
+
+nav ul li a p.alignment {
+    width: 90%;
+}
+
+nav ul li a img {
+    float: left;
+    height: 50px;
+    width: 10%;
+}
+
+.dropmenu {
+    position: absolute;
+    background-color: #FF4D4D;
+    width: 25%;
+    display: none;
+}
+
+.dropdown:hover .dropmenu {
+    display: block;
+}
+
+.dropdown .dropmenu p {
+    text-align: left;
+}
+
+#main {
+    overflow: hidden;
+}
+
+#textarea, #messages {
+    width: 50%;
+    padding: 1em;
+    float: left;
+}
+
+#notepad {
+    font-family: "JetBrains Mono";
+    width: 100%;
+    padding: .5em;
+    font-size: 17px;
+    resize: none;
+}
+
+#messages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FF4D4D;
+}
+
+#messages ul li {
+    width: 100%;
+    height: 100%;
+    background-color: #FF4D4D;
+    text-align: center;
+    padding: 1em;
+    user-select: none;
+    cursor: copy;
+    color: #2E2E2E;
+    font-weight: bolder;
+}
+
+#messages ul li:hover {
+    background-color: #2E2E2E50;
+}
+
+#old-farewell, #new-farewell {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    font-family: "JetBrains Mono";
+    font-size: 13px;
+    box-sizing: border-box;
+    resize: none;
+    display: flex;
+}
+
+#lesson-notes {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    font-family: "JetBrains Mono";
+    font-size: 13px;
+    box-sizing: border-box;
+    resize: none;
+    display: flex;
+}
+
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul {
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #5294E2;
+}
+
+footer ul li {
+    float: left;
+    padding: 1em 2.7em;
+}
+
+footer ul li a abbr img {
+    height: 40px;
+    width: 60px;
+}
