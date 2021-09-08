@@ -52,7 +52,7 @@
     </nav>
     <div id="main">
         <div id="textarea">
-            <textarea id="notepad" rows="23" placeholder="Insert text here..."></textarea>
+            <textarea id="notepad" rows="27" placeholder="Insert text here..."></textarea>
         </div>
         <div id="messages">
             <ul>
@@ -63,33 +63,12 @@ Proficiency Level:
 Material: 
 Attendance: Present
 Special Remarks: A very nice student. :)</textarea>
-                <script>
-					function copyLessonNotes() {
-						var copyText = document.getElementById("lesson-notes");
-						copyText.select();
-						document.execCommand("copy");
-					}
-				</script>
                 <li type="button" class="copy" onclick="copyNewFarewell()">New Student</li>
                 <textarea readonly id="new-farewell">
 Thank you for a wonderful lesson NAME! :) It was a pleasure meeting you and talking with you. Enjoy your day and take care. :)</textarea>
-                <script>
-					function copyNewFarewell() {
-						var copyText = document.getElementById("new-farewell");
-						copyText.select();
-						document.execCommand("copy");
-					}
-				</script>
                 <li type="button" class="copy" onclick="copyOldFarewell()">Old Student</li>
                 <textarea readonly id="old-farewell">
 Thank you for a wonderful lesson NAME! :) It was a pleasure talking with you. Enjoy your day and take care. :)</textarea>
-                <script>
-					function copyOldFarewell() {
-						var copyText = document.getElementById("old-farewell");
-						copyText.select();
-						document.execCommand("copy");
-					}
-				</script>
             </ul>
         </div>
     </div>

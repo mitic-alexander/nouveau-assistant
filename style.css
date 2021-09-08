@@ -28,15 +28,17 @@ nav ul {
     overflow: hidden;
     list-style-type: none;
     background-color: #2E2E2E;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 0 3px 0 3px;
 }
 
 nav ul li {
     float: left;
     width: 25%;
-}
-
-nav ul li:hover {
-    background-color: #FF4D4D;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 2px 0 2px 0;
 }
 
 nav ul li a {
@@ -49,11 +51,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2E2E2E50;
+    filter: grayscale(50%);
+}
+
+nav ul li a:active {
+    filter: grayscale(100%);
 }
 
 nav ul li a p {
-    float: left;
     padding: 1em;
     width: 100%;
     text-align: center;
@@ -62,13 +67,13 @@ nav ul li a p {
 }
 
 nav ul li a p.alignment {
-    width: 90%;
+    margin-left: 60px;
 }
 
 nav ul li a img {
     float: left;
     height: 50px;
-    width: 10%;
+    width: 50px;
 }
 
 .dropmenu {
@@ -76,10 +81,20 @@ nav ul li a img {
     background-color: #FF4D4D;
     width: 25%;
     display: none;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
+    padding: 0.5em;
 }
 
 .dropdown:hover .dropmenu {
     display: block;
+}
+
+.dropdown .dropmenu a {
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 0 0 2px 0;
 }
 
 .dropdown .dropmenu p {
@@ -88,20 +103,40 @@ nav ul li a img {
 
 #main {
     overflow: hidden;
+    padding: 1em;
 }
 
 #textarea, #messages {
     width: 50%;
-    padding: 1em;
     float: left;
+    
+}
+
+#textarea {
+    background-color: #FF4D4D;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 2px;
+    padding: 1em;
+}
+
+#messages {
+    background-color: #FF4D4D;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 2px;
+    padding: 1em;
 }
 
 #notepad {
     font-family: "JetBrains Mono";
     width: 100%;
     padding: .5em;
-    font-size: 17px;
+    font-size: 15px;
     resize: none;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 2px;
 }
 
 #messages ul {
@@ -109,6 +144,9 @@ nav ul li a img {
     margin: 0;
     padding: 0;
     background-color: #FF4D4D;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
 }
 
 #messages ul li {
@@ -116,15 +154,23 @@ nav ul li a img {
     height: 100%;
     background-color: #FF4D4D;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     user-select: none;
-    cursor: copy;
+    cursor: pointer;
     color: #2E2E2E;
     font-weight: bolder;
+    background-color: #FF4D4D;
+    border: #2E2E2E;
+    border-style: solid;
+    border-width: 2px 0 2px 0;
 }
 
 #messages ul li:hover {
-    background-color: #2E2E2E50;
+    filter: grayscale(50%);
+}
+
+#messages ul li:active {
+    filter: grayscale(100%);
 }
 
 #old-farewell, #new-farewell {
@@ -169,4 +215,13 @@ footer ul li {
 footer ul li a abbr img {
     height: 40px;
     width: 60px;
+    display: flex;
+}
+
+footer ul li a abbr img:hover {
+    filter: grayscale(50%);
+}
+
+footer ul li a abbr img:active {
+    filter: grayscale(100%);
 }
