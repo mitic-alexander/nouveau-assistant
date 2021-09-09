@@ -2,72 +2,104 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: #2E2E2E;
+    border: #2E2E2E;
+    text-align: center;
+    text-decoration: none;
 }
 
 body {
     font-family: "JetBrains Mono";
     background-color: #2E2E2E;
-    color: #EEEEEE;
 }
+
+/* HEADER */
 
 header {
     width: 100%;
-    color: #2E2E2E;
     font-weight: bolder;
 }
 
 header p {
-    padding: .5em;
-    font-size: 32px;
-    font-weight: bold;
     background-color: #5294E2;
-    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    padding: .5em;
+    user-select: none;
 }
+
+/* NAVIGATION BAR */
 
 nav ul {
     overflow: hidden;
     list-style-type: none;
-    background-color: #2E2E2E;
-    border: #2E2E2E;
     border-style: solid;
-    border-width: 0 3px 0 3px;
+    border-width: 0 2px 0 2px;
 }
 
 nav ul li {
     float: left;
+    font-weight: bolder;
     width: 25%;
-    border: #2E2E2E;
     border-style: solid;
     border-width: 2px 0 2px 0;
 }
 
-nav ul li a {
-    color: #EEEEEE;
-    text-decoration: none;
-    display: block;
-    height: 50px;
-    overflow: hidden;
+.dropmenu {
+    position: absolute;
+    display: none;
     background-color: #FF4D4D;
+    width: 25%;
+    padding: 0.5em;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
 }
 
-nav ul li a:hover {
+.dropdown .dropmenu a {
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+}
+
+.dropdown:hover .dropmenu {
+    display: block;
+    color: #EEEEEE;
+}
+
+.nav-links {
+    display: block;
+    background-color: #FF4D4D;
+    font-weight: bolder;
+    overflow: hidden;
+    padding: 1em;
+    user-select: none;
+    cursor: pointer;
+}
+
+.nav-links:hover {
     filter: grayscale(50%);
+    color: #EEEEEE;
 }
 
-nav ul li a:active {
+.nav-links:active {
     filter: grayscale(100%);
 }
 
-nav ul li a p {
-    padding: 1em;
-    width: 100%;
-    text-align: center;
-    color: #2E2E2E;
+.drop-links {
+    display: flex;
+    background-color: #FF4D4D;
     font-weight: bolder;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
 }
 
-nav ul li a p.alignment {
-    margin-left: 60px;
+.drop-links:hover {
+    filter: grayscale(50%);
+    color: #EEEEEE;
+}
+
+.drop-links:active {
+    filter: grayscale(100%);
 }
 
 nav ul li a img {
@@ -76,124 +108,95 @@ nav ul li a img {
     width: 50px;
 }
 
-.dropmenu {
-    position: absolute;
-    background-color: #FF4D4D;
-    width: 25%;
-    display: none;
-    border: #2E2E2E;
-    border-style: solid;
-    border-width: 0 2px 2px 2px;
-    padding: 0.5em;
-}
-
-.dropdown:hover .dropmenu {
-    display: block;
-}
-
-.dropdown .dropmenu a {
-    border: #2E2E2E;
-    border-style: solid;
-    border-width: 0 0 2px 0;
-}
-
-.dropdown .dropmenu p {
+.alignment {
+    float: left;
+    color: inherit;
+    font-weight: bolder;
     text-align: left;
+    margin-left: 13px;
+    margin-top: 15px;
 }
+
+/* MAIN AREA */
 
 #main {
     overflow: hidden;
+    margin-top: 5em;
     padding: 1em;
 }
 
 #textarea, #messages {
     width: 50%;
     float: left;
-    
+    padding: 1em;
 }
 
 #textarea {
     background-color: #FF4D4D;
-    border: #2E2E2E;
     border-style: solid;
     border-width: 2px;
-    padding: 1em;
 }
 
 #messages {
     background-color: #FF4D4D;
-    border: #2E2E2E;
     border-style: solid;
     border-width: 2px;
-    padding: 1em;
 }
 
 #notepad {
+    display: flex;
+    text-align: left;
     font-family: "JetBrains Mono";
+    font-size: 13px;
     width: 100%;
-    padding: .5em;
-    font-size: 15px;
-    resize: none;
-    border: #2E2E2E;
+    padding: 1em;
     border-style: solid;
     border-width: 2px;
+    resize: none;
+    outline: none;
 }
 
 #messages ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     background-color: #FF4D4D;
-    border: #2E2E2E;
     border-style: solid;
     border-width: 0 2px 2px 2px;
 }
 
 #messages ul li {
+    background-color: #5294E2;
+    font-weight: bolder;
     width: 100%;
     height: 100%;
-    background-color: #FF4D4D;
-    text-align: center;
-    padding: 0.5em;
-    user-select: none;
-    cursor: pointer;
-    color: #2E2E2E;
-    font-weight: bolder;
-    background-color: #FF4D4D;
-    border: #2E2E2E;
+    padding: 0.23em;
     border-style: solid;
     border-width: 2px 0 2px 0;
+    user-select: none;
+    cursor: pointer;
 }
 
 #messages ul li:hover {
-    filter: grayscale(50%);
+    filter: grayscale(25%);
+    color: #EEEEEE;
 }
 
 #messages ul li:active {
     filter: grayscale(100%);
 }
 
-#old-farewell, #new-farewell {
-    width: 100%;
-    padding: 5px;
-    border: none;
+#old-farewell, #new-farewell, #lesson-notes {
+    display: flex;
+    text-align: left;
     font-family: "JetBrains Mono";
     font-size: 13px;
-    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    border: none;
     resize: none;
-    display: flex;
+    outline: none;
 }
 
-#lesson-notes {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    font-family: "JetBrains Mono";
-    font-size: 13px;
-    box-sizing: border-box;
-    resize: none;
-    display: flex;
-}
+/* FOOTER */
 
 footer {
     width: 100%;
@@ -209,17 +212,19 @@ footer ul {
 
 footer ul li {
     float: left;
-    padding: 1em 2.7em;
+    padding: 1em calc((100% - (59px * 13)) / 26);
 }
 
 footer ul li a abbr img {
-    height: 40px;
-    width: 60px;
     display: flex;
+    height: 40px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2E2E2E00;
 }
 
 footer ul li a abbr img:hover {
-    filter: grayscale(50%);
+    border-color: #2E2E2E;
 }
 
 footer ul li a abbr img:active {
